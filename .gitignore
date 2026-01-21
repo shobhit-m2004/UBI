@@ -1,0 +1,64 @@
+# =====================
+# Python
+# =====================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# =====================
+# Virtual Environments
+# =====================
+.venv/
+venv/
+env/
+
+# =====================
+# Environment variables
+# =====================
+.env
+.env.*
+
+# =====================
+# Build / Packaging
+# =====================
+build/
+dist/
+wheels/
+*.egg-info/
+.eggs/
+
+# =====================
+# uv / Python tooling
+# =====================
+.python-version
+# uv.lock   
+# Uncomment the next line if you do NOT want uv.lock tracked
+ uv.lock
+
+# =====================
+# Caches & Logs
+# =====================
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.log
+
+# =====================
+# IDE / Editor
+# =====================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# =====================
+# Data (optional)
+# =====================
+# Ignore all data files (uncomment if data is local-only)
+# data/
+
+# Keep empty data directory
+# data/.gitkeep
