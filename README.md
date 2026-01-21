@@ -51,6 +51,7 @@ RAG works by combining **document retrieval** with **AI generation**:
 - **Vector Database:** FAISS
 - **PDF Processing:** PyPDF
 - **Frontend:** Streamlit
+- **Tokenization:** tiktoken
 - **Environment Variables:** dotenv
 
 ---
