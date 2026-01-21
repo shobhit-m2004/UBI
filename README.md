@@ -85,9 +85,7 @@ uv add -r requirements.txt
 
 ### Run the Application
 
-```bash
 streamlit run app.py
-```
 
 ---
 
