@@ -35,20 +35,10 @@ vectordb, chunks = init_rag()
 # ---------------- UI ----------------
 st.title("Digital Marketing Professor")
 
-if "messages" not in st.session_state:
-    st.session_state.messages = []
-
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
-
 # ---------------- CHAT INPUT ----------------
-if prompt_input := st.chat_input("Ask a question"):
-    st.session_state.messages.append({
-        "role": "user",
-        "content": prompt_input
-    })
+prompt_input = st.chat_input("Ask a question")
 
+if prompt_input:
     with st.chat_message("user"):
         st.markdown(prompt_input)
 
@@ -84,10 +74,4 @@ User Input:
             model="gemini-2.5-flash",
             contents=full_prompt
         )
-        answer = response.text
-        st.markdown(answer)
-
-        st.session_state.messages.append({
-            "role": "assistant",
-            "content": answer
-        })
+        st.markdown(response.text)

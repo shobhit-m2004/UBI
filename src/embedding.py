@@ -17,4 +17,6 @@ def embed_text(text: str) -> np.ndarray:
         model="text-embedding-004",
         contents=text
     )
+    # print(result)
+    # print(type(np.array(result.embeddings[0].values, dtype="float32")))
     return np.array(result.embeddings[0].values, dtype="float32")
