@@ -1,6 +1,6 @@
 import tiktoken
 
-# Token-based chunking (safe for LLMs)
+
 def chunk_documents(documents, max_tokens=300, overlap=50):
     """
     documents: list of dicts from PDF loader
