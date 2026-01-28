@@ -11,10 +11,10 @@ if not API_KEY:
     raise RuntimeError("GOOGLE_API_KEY not found in .env file")
 
 client = genai.Client(api_key=API_KEY)
-
+# https://ai.google.dev/gemini-api/docs/embeddings
 def embed_text(text: str) -> np.ndarray:
     result = client.models.embed_content(
-        model="text-embedding-004",
+        model="gemini-embedding-001",
         contents=text
     )
     # print(result)

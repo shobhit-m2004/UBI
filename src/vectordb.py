@@ -10,4 +10,6 @@ class VectorDB:
 
     def search(self, query_embedding, top_k=3):
         distances, indices = self.index.search(query_embedding, top_k)
+        # print(distances)
+        # print(f" indices {indices}")
         return indices[0]
