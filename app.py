@@ -75,8 +75,12 @@ User Input:
             contents=full_prompt
         )
         st.markdown(response.text)
-    with st.expander(" Retrieved Context Chunks"):
+    with st.expander("Retrieved Context Chunks"):
      for r in results:
         st.write(f"{r['source']} | Page {r['page']}")
-        st.write(r['text'])
+        st.write(r["text"])
+        pdf_link = f"file://{r['path']}#page={r['page']}"
+        st.markdown(f"📄 [Open PDF Page]({pdf_link})")
+
         st.divider()
+

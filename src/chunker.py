@@ -27,7 +27,8 @@ def chunk_documents(documents, max_tokens=300, overlap=50):
                     "text": chunk_text.strip(),
                     "source": doc["source"],
                     "page": doc["page"],
-                    "chunk_id": chunk_id
+                    "chunk_id": chunk_id,
+                    "path":doc["path"]
                 })
            
                 chunk_id += 1
