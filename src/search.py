@@ -2,12 +2,13 @@ import numpy as np
 from .embedding import embed_text     
 from .vectordb import VectorDB          
 
+# https://www.pinecone.io/learn/vector-database/
 
 def build_rag_index(chunks):
     embeddings = [embed_text(c["text"]) for c in chunks]
     embeddings_np = np.array(embeddings, dtype="float32")
-    print(embeddings)
-    print(embeddings_np)
+    # print(embeddings)
+    # print(embeddings_np)
     vectordb = VectorDB(embeddings_np.shape[1])
     vectordb.add(embeddings_np)
 

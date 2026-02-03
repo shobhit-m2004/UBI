@@ -79,8 +79,8 @@ User Input:
      for r in results:
         st.write(f"{r['source']} | Page {r['page']}")
         st.write(r["text"])
-        pdf_link = f"file://{r['path']}#page={r['page']}"
-        st.markdown(f"📄 [Open PDF Page]({pdf_link})")
+        pdf_link =r['path']
+        st.markdown(f"[Open PDF Page]({pdf_link})")
 
         st.divider()
 
