@@ -47,7 +47,7 @@ RAG works by combining **document retrieval** with **AI generation**:
 ## 🛠️ Technologies Used
 
 - **LLM:** Google Gemini
-- **Embedding model:** text-embedding-004
+- **Embedding model:** gemini-embedding-001
 - **Vector Database:** FAISS
 - **PDF Processing:** PyPDF
 - **Frontend:** Streamlit
