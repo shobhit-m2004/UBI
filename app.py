@@ -75,3 +75,8 @@ User Input:
             contents=full_prompt
         )
         st.markdown(response.text)
+    with st.expander(" Retrieved Context Chunks"):
+     for r in results:
+        st.write(f"{r['source']} | Page {r['page']}")
+        st.write(r['text'])
+        st.divider()
